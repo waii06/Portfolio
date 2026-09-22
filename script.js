@@ -1,7 +1,3 @@
-// ========================================
-// SAY HELLO
-// ========================================
-
 function sayHello() {
 
     const message = document.getElementById("hello-message");
@@ -13,11 +9,6 @@ function sayHello() {
     }, 3000);
 }
 
-
-// ========================================
-// SHOW CONTACT
-// ========================================
-
 function showContact() {
 
     alert(
@@ -26,11 +17,6 @@ function showContact() {
         "Phone: 09692615804"
     );
 }
-
-
-// ========================================
-// SCROLL REVEAL
-// ========================================
 
 const revealElements = document.querySelectorAll(".reveal");
 
@@ -57,11 +43,6 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach((element) => {
     revealObserver.observe(element);
 });
-
-
-// ========================================
-// SKILL ANIMATION
-// ========================================
 
 const skillCards = document.querySelectorAll(".skill-card");
 
@@ -100,11 +81,6 @@ skillCards.forEach((card) => {
     skillObserver.observe(card);
 });
 
-
-// ========================================
-// NAVBAR SCROLL EFFECT
-// ========================================
-
 const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
@@ -120,11 +96,6 @@ window.addEventListener("scroll", () => {
     }
 
 });
-
-
-// ========================================
-// ACTIVE NAVIGATION
-// ========================================
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -161,3 +132,21 @@ const sectionObserver = new IntersectionObserver(
 sections.forEach((section) => {
     sectionObserver.observe(section);
 });
+
+function toggleProject(card) {
+
+    const projects = document.querySelectorAll(
+        ".project-expandable"
+    );
+    projects.forEach((project) => {
+
+        if (project !== card) {
+            project.classList.remove("expanded");
+        }
+
+    });
+
+    card.classList.toggle("expanded");
+
+}
+
